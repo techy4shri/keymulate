@@ -8,7 +8,7 @@ import (
 )
 
 func main() {
-	switchPtr := flag.String("switch", "blue", "The sound of switches to output")
+	switchPtr := flag.String("switch", "mxblue", "The sound of switches to output")
   flag.Parse()
 
 	keyboards, err := kbd.GetKeyboards()
