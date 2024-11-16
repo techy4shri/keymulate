@@ -26,8 +26,9 @@ const RELEASE_ENTER = "release/ENTER"
 const RELEASE_GENERIC = "release/GENERIC"
 const RELEASE_SPACE = "release/SPACE"
 
-const ENTER uint16 = 36
-const SPACE uint16 = 49
+const ENTER uint16 = 65293
+const SPACE uint16 = 32
+const BACKSPACE  uint16 = 65288
 
 type inputEvent struct {
 	Time  syscall.Timeval

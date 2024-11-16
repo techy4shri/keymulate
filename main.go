@@ -87,6 +87,8 @@ func main() {
 			scheduleSound(kbd.PRESS_ENTER)
 		} else if e.Rawcode == kbd.SPACE {
 			scheduleSound(kbd.PRESS_SPACE)
+		} else if e.Rawcode == kbd.BACKSPACE {
+			scheduleSound(kbd.PRESS_BACKSPACE)
 		} else {
 			scheduleSound(getPressKey())
 		}
@@ -102,6 +104,8 @@ func main() {
 			scheduleSound(kbd.RELEASE_ENTER)
 		} else if e.Rawcode == kbd.SPACE {
 			scheduleSound(kbd.RELEASE_SPACE)
+		} else if e.Rawcode == kbd.BACKSPACE {
+			scheduleSound(kbd.RELEASE_BACKSPACE)
 		} else {
 			scheduleSound(kbd.RELEASE_GENERIC)
 		}
