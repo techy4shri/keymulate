@@ -60,7 +60,7 @@ func loadSound(switchType, soundName, action, cwd string) []byte {
 }
 
 func LoadSoundsForKeyboard(switchType string) (map[string][]byte, map[string][]byte) {
-  cwd, err := os.Getwd()
+	cwd, err := os.Getwd()
 	if err != nil {
 		log.Fatalf("failed to get cwd: %v", err)
 	}
@@ -72,7 +72,7 @@ func LoadSoundsForKeyboard(switchType string) (map[string][]byte, map[string][]b
 	releaseKeys := []string{"GENERIC", "ENTER", "BACKSPACE", "SPACE"}
 
 	for _, key := range pressKeys {
-		sound := loadSound(switchType, key , "press", cwd)
+		sound := loadSound(switchType, key, "press", cwd)
 		pressSounds[key] = sound
 	}
 
@@ -117,7 +117,7 @@ func PlaySound(otoCtx *oto.Context, sound []byte) {
 	// Wait for the sound to finish playing
 	for player.IsPlaying() {
 		// You might want to add a small sleep here to prevent busy-waiting
-		 time.Sleep(time.Millisecond)
+		time.Sleep(time.Millisecond)
 	}
 
 	err = player.Close()

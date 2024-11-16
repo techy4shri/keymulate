@@ -12,6 +12,23 @@ import (
 	"github.com/halfloafhq/keymulate/internal/audio"
 )
 
+const PRESS_BACKSPACE = "press/BACKSPACE"
+const PRESS_ENTER = "press/ENTER"
+const PRESS_GENERIC_R0 = "press/GENERIC_R0"
+const PRESS_GENERIC_R1 = "press/GENERIC_R1"
+const PRESS_GENERIC_R2 = "press/GENERIC_R2"
+const PRESS_GENERIC_R3 = "press/GENERIC_R3"
+const PRESS_GENERIC_R4 = "press/GENERIC_R4"
+const PRESS_SPACE = "press/SPACE"
+
+const RELEASE_BACKSPACE = "release/BACKSPACE"
+const RELEASE_ENTER = "release/ENTER"
+const RELEASE_GENERIC = "release/GENERIC"
+const RELEASE_SPACE = "release/SPACE"
+
+const ENTER uint16 = 36
+const SPACE uint16 = 49
+
 type inputEvent struct {
 	Time  syscall.Timeval
 	Type  uint16
